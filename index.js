@@ -8,13 +8,16 @@ function tempo(dataInicio){
     let horasJunto = (tempoJunto/(1000*60*60)).toString()
     let minutosJunto = (tempoJunto/(1000*60)).toString()
     let segundosJunto = parseInt(tempoJunto/(1000)).toString()
-    
+    let horasAgora = hoje.getHours()
+    let minutosAgora = hoje.getMinutes()
     return {
         tempoJunto,
         diasJunto,
         horasJunto,
         minutosJunto,
-        segundosJunto
+        segundosJunto,
+        horasAgora,
+        minutosAgora
     }
 }
 
@@ -68,6 +71,8 @@ class EfeitoDigitacao{
 
 }
 let tempoJunto = tempo(inicio)
-let frases = ['Oi amor','Eu te amo !', `Feliz ${tempoJunto.diasJunto} dias juntos !`, 'Pare de peidar podre']
+
+
+let frases = ['Oi amor','Eu te amo !', `Feliz ${tempoJunto.diasJunto} dias casados!`, 'Por favor, pare de peidar podre pelo amor de Deus!']
 new EfeitoDigitacao('titulo', frases)
 
