@@ -73,6 +73,6 @@ class EfeitoDigitacao{
 let tempoJunto = tempo(inicio)
 
 
-let frases = ['Oi amor','Eu te amo !', `Feliz ${tempoJunto.diasJunto} dias casados!`, 'Por favor, pare de peidar podre pelo amor de Deus!']
+let frases = ['Oi amor','Eu te amo !', `Feliz ${tempoJunto.diasJunto} dias casados!`]
 new EfeitoDigitacao('titulo', frases)
 

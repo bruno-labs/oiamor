@@ -1,0 +1,131 @@
+/* 🎨 Variáveis CSS para melhor manutenção */
+:root {
+    --cor-primaria: #cafa1d;
+    --cor-secundaria: #ffffff;
+    --cor-sombra: #0c0c0c;
+    --cor-fundo: #19232f;
+    --cor-transparente: rgba(25, 35, 47, 0.7);
+}
+
+/* 🖋️ Fonte personalizada */
+@font-face {
+    font-family: 'press-start';
+    src: url(./fonts/PressStart2P-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 🔥 Animação de pulsação */
+@keyframes bate {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    25% { transform: scale(1.2); opacity: 0.7; }
+    50% { transform: scale(1.4); opacity: 0.9; }
+}
+
+/* ✨ Piscar do cursor */
+@keyframes pisca {
+    50% { opacity: 0; }
+}
+
+/* 🎨 Fundo do site */
+html {
+    background: url(./images/casamento3.webp) center/cover no-repeat fixed;
+}
+
+/* 🎯 Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'press-start', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+    max-width: 70vw;
+    text-align: center;
+}
+
+/* 🔤 Títulos */
+h1, h2 {
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsivo */
+    color: var(--cor-primaria);
+    text-shadow: 3px 3px 1px var(--cor-sombra);
+    overflow: hidden;
+}
+
+h1::after {
+    content: '|';
+    animation: pisca 0.5s infinite;
+}
+
+h2 {
+    font-size: clamp(1.2rem, 4vw, 1.7rem);
+}
+
+/* 🩷 Coração animado */
+#coracao {
+    animation: bate 1s infinite ease-in-out;
+    overflow: hidden;
+}
+
+/* 📌 Conteúdo */
+.conteudo {
+    background-color: var(--cor-fundo);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* 🎭 Efeito moderno de vidro */
+}
+
+/* 🖼️ Imagens */
+.image {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/* 📝 Texto */
+.texto {
+    color: var(--cor-secundaria);
+    text-shadow: 2px 2px 1px black;
+    line-height: 1.5;
+}
+
+/* 📌 Flexbox */
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 900px) {
+    body {
+        max-width: 100vw;
+        padding: 10px;
+    }
+    #coracao {
+        width: 300px;
+    }
+    .conteudo {
+        background-color: var(--cor-transparente);
+    }
+    h1 {
+        font-size: clamp(1.5rem, 4vw, 1.9rem);
+    }
+}
