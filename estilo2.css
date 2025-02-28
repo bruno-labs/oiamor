@@ -80,11 +80,11 @@ h2 {
 #coracao {
     animation: bate 1s infinite ease-in-out;
     overflow: hidden;
+    contain: layout;
 }
 
 /* 📌 Conteúdo */
 .conteudo {
-    background-color: var(--cor-fundo);
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
