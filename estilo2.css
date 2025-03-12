@@ -1,6 +1,6 @@
 /* 🎨 Variáveis CSS para melhor manutenção */
 :root {
-    --cor-primaria: #cafa1d;
+    --cor-primaria: #f3f709;
     --cor-secundaria: #ffffff;
     --cor-sombra: #0c0c0c;
     --cor-fundo: #19232f;
@@ -85,11 +85,12 @@ h2 {
 
 /* 📌 Conteúdo */
 .conteudo {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     padding: 20px;
     border-radius: 10px;
     backdrop-filter: blur(10px); /* 🎭 Efeito moderno de vidro */
+    
 }
 
 /* 🖼️ Imagens */
@@ -101,7 +102,7 @@ h2 {
 /* 📝 Texto */
 .texto {
     color: var(--cor-secundaria);
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 0px 0px 6px var(--cor-sombra);
     line-height: 1.5;
 }
 

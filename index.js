@@ -70,9 +70,8 @@ class EfeitoDigitacao{
         }
 
 }
+
 let tempoJunto = tempo(inicio)
-
-
 let frases = ['Oi amor','Eu te amo !', `Feliz ${tempoJunto.diasJunto} dias casados!`]
 new EfeitoDigitacao('titulo', frases)
 
