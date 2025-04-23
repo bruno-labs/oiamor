@@ -174,7 +174,7 @@ h2 {
         background-color: var(--cor-transparente);
     }
     h1 {
-        font-size: 64px;
-        height: 200px;
+        font-size: 52px;
+        height: auto;
     }
 }
