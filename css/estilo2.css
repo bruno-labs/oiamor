@@ -1,17 +1,28 @@
 /* 🎨 Variáveis CSS para melhor manutenção */
 :root {
-    --cor-primaria: #f3f709;
-    --cor-secundaria: #ffffff;
+    --cor-primaria: #CAEDDE;
+    --cor-secundaria: #4D3932;
     --cor-sombra: #0c0c0c;
     --cor-fundo: #19232f;
-    --cor-transparente: rgba(25, 35, 47, 0.7);
+    --cor-transparente: rgb(80, 74, 68);
+    
 }
+
+
 
 /* 🖋️ Fonte personalizada */
 @font-face {
-    font-family: 'press-start';
-    src: url(./fonts/PressStart2P-Regular.ttf) format('truetype');
-    font-weight: normal;
+    font-family: 'croissant'; 
+    src: url(../fonts/CroissantOne-Regular.ttf);
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'fondamento'; 
+    src: url(../fonts/Fondamento-Regular.ttf);
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -30,7 +41,7 @@
 
 /* 🎨 Fundo do site */
 html {
-    background: url(./images/casamento3.webp) center/cover no-repeat fixed;
+    background: url(../images/casamento-fundo-1.webp) center/cover no-repeat fixed;
 }
 
 /* 🎯 Reset e estilos gerais */
@@ -41,7 +52,7 @@ html {
 }
 
 body {
-    font-family: 'press-start', sans-serif;
+    font-family: 'croissant', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +62,7 @@ body {
     height: 100vh;
     max-width: 70vw;
     text-align: center;
+    
 }
 
 /* 🔤 Títulos */
@@ -58,13 +70,17 @@ h1, h2 {
     display: block;
     width: 100%;
     line-height: 1.5;
+    font-family: 'fondamento';
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 3rem); /* Responsivo */
+    font-size: 5rem; /* Responsivo */
     color: var(--cor-primaria);
-    text-shadow: 3px 3px 1px var(--cor-sombra);
+    text-shadow: 2px 2px 1px var(--cor-sombra);
     overflow: hidden;
+    margin-bottom: 150px;
+    margin-top: 250px;
+    height: auto;
 }
 
 h1::after {
@@ -73,7 +89,8 @@ h1::after {
 }
 
 h2 {
-    font-size: clamp(1.2rem, 4vw, 1.7rem);
+    font-size: 4rem;
+    
 }
 
 /* 🩷 Coração animado */
@@ -81,6 +98,7 @@ h2 {
     animation: bate 1s infinite ease-in-out;
     overflow: hidden;
     contain: layout;
+    display: none;
 }
 
 /* 📌 Conteúdo */
@@ -92,7 +110,11 @@ h2 {
     backdrop-filter: blur(10px); /* 🎭 Efeito moderno de vidro */
     
 }
-
+.conteudo p{
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
 /* 🖼️ Imagens */
 .image {
     object-fit: contain;
@@ -101,9 +123,34 @@ h2 {
 
 /* 📝 Texto */
 .texto {
-    color: var(--cor-secundaria);
+    color: var(--cor-primaria);
     text-shadow: 0px 0px 6px var(--cor-sombra);
     line-height: 1.5;
+}
+
+.interface{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    gap: 32px;
+    align-items: center;
+}
+.botao-1{
+    width: 350px;
+    padding: 8px 16px;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    font-family: 'croissant';
+    font-size: 2rem;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.botao-1:active{
+    box-shadow: 1px 1px var(--cor-secundaria);
+    transform: translate(1px, 1px);
+    
 }
 
 /* 📌 Flexbox */
@@ -127,6 +174,7 @@ h2 {
         background-color: var(--cor-transparente);
     }
     h1 {
-        font-size: clamp(1.5rem, 4vw, 1.9rem);
+        font-size: 64px;
+        height: 200px;
     }
 }

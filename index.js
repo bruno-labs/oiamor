@@ -21,57 +21,57 @@ function tempo(dataInicio){
     }
 }
 
+class EfeitoDigitacao {
+    #indiceFrases = 0;
+    #indiceLetra = 0;
+    #digitando = true;
 
-
-class EfeitoDigitacao{
-    #indiceFrases = 0
-    #indiceLetra = 0
-    #digitando = true
-
-    constructor(elementoID, textos=[], speed = 100){
+    constructor(elementoID, textos = [], speed = 100) {
         this.elemento = document.getElementById(elementoID)
         this.textos = textos
         this.speed = speed
-        if(this.elemento === null){
+        if (this.elemento === null) {
             console.error(`Elemento com id "${elementoID}" não encontrado`)
         }
         this.digitar(this.speed)
     }
-    
-    
-    digitar(){
+
+
+    digitar() {
         const fraseAtual = this.textos[this.#indiceFrases]
-        if(this.#digitando){
-            this.elemento.textContent = fraseAtual.substring(0,this.#indiceLetra)
+        if (this.#digitando) {
+            this.elemento.textContent = fraseAtual.substring(0, this.#indiceLetra)
             this.#indiceLetra++
-            
-            if(this.#indiceLetra > fraseAtual.length){
-                setTimeout(()=>{
-                    this.#digitando=false
+
+            if (this.#indiceLetra > fraseAtual.length) {
+                setTimeout(() => {
+                    this.#digitando = false
                     this.digitar()
-                },500)
+                }, 500)
                 return
             }
-        }else{
-            this.elemento.textContent = fraseAtual.substring(0,this.#indiceLetra)
+        } else {
+            this.elemento.textContent = fraseAtual.substring(0, this.#indiceLetra)
             this.#indiceLetra--
-            
-            if(this.#indiceLetra < 0){
-                this.#digitando=true
+
+            if (this.#indiceLetra < 0) {
+                this.#digitando = true
                 this.#indiceFrases++
-                if(this.#indiceFrases === this.textos.length){
+                if (this.#indiceFrases === this.textos.length) {
                     this.#indiceFrases = 0
                 }
                 console.log(this.#indiceFrases)
             }
         }
 
-        setTimeout(()=>this.digitar(), this.speed)
-        }
+        setTimeout(() => this.digitar(), this.speed)
+    }
 
 }
 
 let tempoJunto = tempo(inicio)
-let frases = ['Oi amor','Eu te amo !', `Feliz ${tempoJunto.diasJunto} dias casados!`]
+let frases = ['Oi amor','Eu te amo !', `Feliz ${tempoJunto.diasJunto} dias de casados!`, 'Não me arrependo de ter mudado minha vida por você']
 new EfeitoDigitacao('titulo', frases)
+
+
 

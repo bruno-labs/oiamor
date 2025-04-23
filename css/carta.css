@@ -1,0 +1,13 @@
+.carta{
+    background-color: rgba(245, 245, 220, 0.897);
+    width: 100vw;
+    color: #41332f;
+}
+#titulo{
+    color: #41332f;
+    text-shadow: none;
+    height: 130px;
+}
+#titulo::after{
+    content: none;
+}
